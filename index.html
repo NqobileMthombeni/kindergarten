@@ -5,69 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="image4.ico" type="image/x-icon">
     <link rel="shortcut icon" href="image4.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
-
-    
-
-
-
-    <title>Welcome to Zakheni Pre School - Fun Learning for Kids!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <title>Welcome to Zakheni Pre School - Fun Learning in the Sky!</title>
     <style>
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
+        :root {
+            --sky-blue: #87CEEB;
+            --cloud-white: #FFFFFF;
+            --sun-yellow: #FFD700;
+            --grass-green: #7CFC00;
+            --rainbow-red: #FF6347;
+            --rainbow-orange: #FFA500;
+            --rainbow-green: #32CD32;
+            --rainbow-blue: #1E90FF;
+            --rainbow-purple: #8A2BE2;
         }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-30px); }
-            60% { transform: translateY(-15px); }
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        @keyframes colorChange {
-            0% { color: red; }
-            25% { color: blue; }
-            50% { color: green; }
-            75% { color: orange; }
-            100% { color: red; }
-        }
-        @keyframes walk {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-        body {
-            font-family: 'Comic Sans MS', sans-serif;
-            line-height: 1.6;
+
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #87CEEB;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, var(--sky-blue) 0%, #E0F6FF 100%);
             color: #333;
             overflow-x: hidden;
         }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
         header {
-            background-color: #FF6347;
+            background: linear-gradient(45deg, var(--rainbow-red), var(--rainbow-orange), var(--rainbow-green), var(--rainbow-blue), var(--rainbow-purple));
             color: white;
             text-align: center;
-            padding: 1rem;
-            font-size: 24px;
+            padding: 2rem 1rem;
             position: relative;
             overflow: hidden;
+            border-bottom: 10px solid var(--grass-green);
         }
-        .floating-clouds {
-            position: absolute;
-            top: 10px;
-            font-size: 40px;
-            animation: float 6s ease-in-out infinite;
+
+        h1, h2, h3, h4 {
+            font-family: 'Bubblegum Sans';
+            margin-bottom: 1rem;
         }
-        .cloud-left { left: 10px; }
-        .cloud-right { right: 10px; animation-delay: 1s; }
-        nav {
-            background-color: #4169E1;
-            padding: 0.5rem;
-        }
+
         nav ul {
             list-style-type: none;
             padding: 0;
@@ -86,17 +77,8 @@
         nav ul li a:hover {
             transform: scale(1.2);
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 15px;
-            margin-top: 20px;
-            margin-bottom: 60px;
-        }
-        .highlight {
+
+     .highlight {
             background-color: #FFFF00;
             padding: 20px;
             border-radius: 15px;
@@ -108,61 +90,272 @@
             transform: scale(1.05);
             box-shadow: 0 0 20px rgba(0,0,0,0.2);
         }
+
+        .activity-box {
+            background-color: var(--cloud-white);
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 3px solid var(--rainbow-blue);
+        }
+
+        .activity-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        .testimonials {
+            background-color: var(--rainbow-green);
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        .testimonial {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .faq {
+            background-color: var(--sky-blue);
+            color: rgb(17, 17, 17);
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-top: 10px;
+            color: var(--rainbow-blue);
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid var(--rainbow-blue);
+            margin-top: 5px;
+            font-family: 'Comic Neue', cursive;
+        }
+
+        form button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--rainbow-green);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Bubblegum Sans', cursive;
+            font-size: 18px;
+        }
+
+        form button:hover {
+            background-color: var(--grass-green);
+            transform: scale(1.05);
+        }
+
         footer {
-            background-color: #4169E1;
+            background-color: var(--rainbow-blue);
             color: white;
             text-align: center;
             padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            margin-top: 20px;
+            border-top: 10px solid var(--grass-green);
         }
-        .fun-fact {
-            background-color: #98FB98;
-            padding: 10px;
-            border-radius: 10px;
-            margin-top: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .fun-fact:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
         }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+
+
+        /* Clouds */
+.cloud {
+    position: absolute;
+    background-color: var(--cloud-white);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background-color: var(--cloud-white);
+    border-radius: 50%;
+}
+
+/* Cloud 1 */
+.cloud-1 {
+    width: 10vw; /* Adjusted for responsiveness */
+    height: 4vw; /* Proportionally adjusted */
+    top: 5vh;
+    left: 5vw;
+}
+
+.cloud-1::before {
+    width: 5vw;
+    height: 5vw;
+    top: -2.5vw;
+    left: 1vw;
+}
+
+.cloud-1::after {
+    width: 7vw;
+    height: 7vw;
+    top: -3.5vw;
+    right: 1vw;
+}
+
+/* Cloud 2 */
+.cloud-2 {
+    width: 12vw; /* Adjusted for responsiveness */
+    height: 4.8vw;
+    top: 10vh;
+    right: 5vw;
+    animation-delay: 1s;
+}
+
+.cloud-2::before {
+    width: 6vw;
+    height: 6vw;
+    top: -3vw;
+    left: 1.2vw;
+}
+
+.cloud-2::after {
+    width: 8vw;
+    height: 8vw;
+    top: -4vw;
+    right: 1.2vw;
+}
+
+/* Sun */
+.sun {
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+    width: 8vw;
+    height: 8vw;
+    background-color: var(--sun-yellow);
+    border-radius: 50%;
+    box-shadow: 0 0 2vw var(--sun-yellow);
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Keyframes for float animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+        @keyframes rainbow {
+            0% { color: var(--rainbow-red); }
+            20% { color: var(--rainbow-orange); }
+            40% { color: var(--rainbow-green); }
+            60% { color: var(--rainbow-blue); }
+            80% { color: var(--rainbow-purple); }
+            100% { color: var(--rainbow-red); }
+        }
+
+        h1 {
+            animation: rainbow 10s infinite;
+        }
+
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        /* Existing animations */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes colorChange {
+            0% { color: var(--rainbow-red); }
+            25% { color: var(--rainbow-orange); }
+            50% { color: var(--rainbow-green); }
+            75% { color: var(--rainbow-blue); }
+            100% { color: var(--rainbow-purple); }
+        }
+
+        @keyframes walk {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
         .mascot {
             text-align: center;
             margin: 20px 0;
             animation: bounce 2s infinite;
         }
+
         .rotating-star {
             display: inline-block;
             animation: spin 4s linear infinite;
         }
-        h1 {
-            animation: colorChange 10s infinite;
-        }
-        .activity-box {
-            background-color: #FFA07A;
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-        .activity-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-        }
+
         .animal-parade {
             font-size: 40px;
             white-space: nowrap;
             overflow: hidden;
             margin-top: 20px;
         }
+
         .walking-animal {
             display: inline-block;
             animation: walk 20s linear infinite;
         }
+
         /* Carousel Styles */
         .carousel {
             position: relative;
@@ -170,94 +363,72 @@
             width: 80%;
             overflow: hidden;
         }
+
         .carousel img {
             width: 100%;
             display: none;
         }
+
         .carousel img:first-child {
             display: block;
         }
-        /* Testimonials */
-        .testimonials {
-            margin: 20px 0;
-            background-color: #FFDEAD;
-            padding: 15px;
+
+        #calendar {
+            background-color: #fffacd;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+            margin: 20px auto;
+        }
+        #calendar h3 {
+            color: #4169e1;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #calendar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #calendar li {
+            background-color: white;
             border-radius: 10px;
-        }
-        /* FAQ */
-        .faq {
-            margin: 20px 0;
-            background-color: #F0E68C;
+            margin-bottom: 15px;
             padding: 15px;
-            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
         }
-        /* Form Styles */
-        form {
-            display: flex;
-            flex-direction: column;
+        .event-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
         }
-        form label {
-            margin-top: 10px;
+        .event-date {
+            color: #696969;
         }
-        form input, form textarea {
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-top: 5px;
-        }
-        form button {
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #FF6347;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            
+        .emoji {
+            font-size: 24px;
+            margin-right: 10px;
         }
 
-        .testimonial {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s forwards;
-    margin-bottom: 15px;
+
+
+        .activity-box {
+    background-color: var(--cloud-white);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 3px solid var(--rainbow-blue);
 }
 
-.testimonial:nth-child(1) {
-    animation-delay: 0.2s; /* Delay for the first testimonial */
+.activity-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-.testimonial:nth-child(2) {
-    animation-delay: 0.4s; /* Delay for the second testimonial */
-}
-
-.testimonial:nth-child(3) {
-    animation-delay: 0.6s; /* Delay for the third testimonial */
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-.mascot img.responsive-image {
-    width: 100%;        /* Makes the image take up the full width of its container */
-    height: auto;       /* Maintains the aspect ratio */
-    max-width: 600px;  /* Optional: sets a maximum width to prevent the image from becoming too large */
-    display: block;     /* Ensures the image is displayed as a block element */
-    margin: 0 auto;    
-}
-
-
-.responsive-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
 
 
 
@@ -265,39 +436,42 @@
 </head>
 <body>
     <header>
-        <div class="floating-clouds cloud-left">☁️</div>
-        <div class="floating-clouds cloud-right">☁️</div>
-        <h1>🌟 Welcome to Zakheni Pre School 🌟</h1>
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="sun"></div>
+        <h1>📖 Welcome to Zakheni Pre School 🚌</h1>
         <p>Where Learning is Fun and Adventure Begins!</p>
     </header>
     
     <nav>
         <ul>
-            <li><a href="#home">🏠 Home</a></li>
-            <li><a href="#about">😊 About Us</a></li>
-            <li><a href="#programs">🎨 Fun Activities</a></li>
-            <li><a href="#contact">📞 Contact</a></li>
+            <li><a href="#home"><span class="emoji">🏠</span>Home</a></li>
+            <li><a href="#about"><span class="emoji">😊</span>About Us</a></li>
+            <li><a href="#programs"><span class="emoji">🎨</span>Fun Activities</a></li>
+            <li><a href="#calendar"><span class="emoji">📅</span>Events</a></li>
+            <li><a href="#testimonials"><span class="emoji">💬</span>Testimonials</a></li>
+            <li><a href="#faq"><span class="emoji">❓</span>FAQ</a></li>
+            <li><a href="#contact"><span class="emoji">📞</span>Contact</a></li>
         </ul>
     </nav>
 
-    <div class="container" id="home">
-        <h2>🏫 Let's Learn, Play, and Grow Together! 🧩 </h2>
-        <p>Hello, little explorers! Are you ready for a world of fun and learning?</p>
-        
-        <div class="mascot">
-
-            <img src="image7.png" alt="Zakheni Mascot" class="responsive-img" />
+    <main>
+        <div class="container" id="home">
+            <h2>🏫 Let's Learn, Play, and Grow Together! 🧩</h2>
+            <p>Hello, little explorers! Are you ready for a world of fun and learning?</p>
+            
+            <div class="mascot">
+                <img src="image7.png" alt="Zakheni Mascot" class="responsive-img" />
+            </div>
             
             <p>At Zakheni Pre School, we believe that every child is unique and has the potential to shine. Our caring teachers create a nurturing environment where children can learn through play, explore their creativity, and develop important social skills.</p>
             <p>We provide a safe, fun, and stimulating atmosphere that encourages curiosity and a love for learning.</p>
             <p>Located in a vibrant community, Zakheni Pre School focuses on holistic development. We incorporate engaging activities, a structured curriculum, and individualized attention to help each child thrive.</p>
             <p>Join us as we embark on this exciting journey of growth and discovery!</p>
-        </div>
-        
 
-        <div class="highlight">
-            <h3>🎉 Why Kids Love Zakheni Pre School 🎉</h3>
-            <ul>
+            <div class="highlight">
+                <h3>🎉 Why Kids Love Zakheni Pre School 🎉</h3>
+                <ul>
                 <li>🍎 Yummy and Healthy Snacks - Nutritious treats to fuel their fun and learning.</li>
                 <li>🧩 Cool Toys and Games - A variety of engaging toys that stimulate creativity and teamwork.</li>
                 <li>🎵 Fun Music and Dance Time - Encourage self-expression through movement and rhythm.</li>   
@@ -312,14 +486,16 @@
             </ul>
         </div>
 
+    <div class="activity-box">
         <h3>🌞 Our Fun Learning Adventures 🌞</h3>
         <p>Join us for exciting activities:</p>
+    
         <ul>
             <li>🐣 Little Chicks (2-3 years): Discover the world through play</li>
             <li>🦋 Busy Butterflies (3-4 years): Explore and learn new things</li>
             <li>🦉 Wise Owls (5-6 years): Get ready for big school adventures</li>
         </ul>
-
+    </div>
         <div class="activity-box">
             <h4>🐣 Special Activities for Our Little Chicks (2-3 years) 🐣</h4>
             <ul>
@@ -350,29 +526,29 @@
     
     <div class="container" id="about">
         <h2>📖 About Us</h2>
-        <p>At Zakheni Pre School, we believe that every child is unique and has the potential to shine. Our passionate and caring teachers create a nurturing environment where children can learn through play, explore their creativity, and develop essential social skills.</p>
-        <p>We provide a safe, fun, and stimulating atmosphere that encourages curiosity and a lifelong love for learning. Our curriculum is designed to foster holistic development, catering to each child's individual needs and interests.</p>
-        <p>With our engaging activities, children not only gain knowledge but also build confidence and friendships that last a lifetime. We invite you to join our family and embark on this exciting journey of growth and discovery!</p>
+        <div class="activity-box">
+            <p>At Zakheni Pre School, we believe that every child is unique and has the potential to shine. Our passionate and caring teachers create a nurturing environment where children can learn through play, explore their creativity, and develop essential social skills.</p>
+            <p>We provide a safe, fun, and stimulating atmosphere that encourages curiosity and a lifelong love for learning. Our curriculum is designed to foster holistic development, catering to each child's individual needs and interests.</p>
+            <p>With our engaging activities, children not only gain knowledge but also build confidence and friendships that last a lifetime. We invite you to join our family and embark on this exciting journey of growth and discovery!</p>
+        </div>
     </div>
     
-
     <div class="container" id="programs">
         <div class="activities">
             <h2>🎉 Fun Activities 🎉</h2>
-            
-            <p>We offer a variety of activities to keep your little ones engaged and entertained:</p>
-        
-            <ul>
-                <li>🎨 Arts & Crafts - Explore creativity with paint, paper, and clay!</li>
-                <li>🧩 Puzzles & Brain Games - Challenge their minds with fun brain teasers!</li>
-                <li>🎵 Music & Dance - Let your child express themselves through rhythm and song!</li>
-                <li>🏃‍♂️ Outdoor Games - Active play to build strong bodies and friendships!</li>
-            </ul>
-        
-            <div class="fun-fact">
-                <p>Fun Fact: Did you know that play is essential for children's development?</p>
+            <div class="activity-box">
+                <p>We offer a variety of activities to keep your little ones engaged and entertained:</p>
+                <ul>
+                    <li>🎨 Arts & Crafts - Explore creativity with paint, paper, and clay!</li>
+                    <li>🧩 Puzzles & Brain Games - Challenge their minds with fun brain teasers!</li>
+                    <li>🎵 Music & Dance - Let your child express themselves through rhythm and song!</li>
+                    <li>🏃‍♂️ Outdoor Games - Active play to build strong bodies and friendships!</li>
+                </ul>
+                <div class="fun-fact">
+                    <p>Fun Fact: Did you know that play is essential for children's development?</p>
+                </div>
             </div>
-        
+            
             <div class="animal-parade">
                 <span class="walking-animal">🐶</span>
                 <span class="walking-animal">🐱</span>
@@ -383,15 +559,21 @@
                 <span class="walking-animal">🐰</span>
             </div>
         </div>
-        
     </div>
-
+    
     <div class="container" id="calendar">
         <h3>📅 Upcoming Events</h3>
         <ul>
-            <li>🎄 Year End Ceremony  - November 30, 2024</li>
-            <li>🎨 Open Day - January 13, 2025</li>
-           
+            <li>
+                <span class="emoji">🎄</span>
+                <span class="event-title">Year End Ceremony</span>
+                <div class="event-date">November 30, 2024</div>
+            </li>
+            <li>
+                <span class="emoji">🎨</span>
+                <span class="event-title">Open Day</span>
+                <div class="event-date">January 13, 2025</div>
+            </li>
         </ul>
     </div>
 
